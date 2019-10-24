@@ -1,0 +1,19 @@
+{
+  "name": "backend-project-lvl1-ivan-lisin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iFoxMan/backend-project-lvl1.git"
+  },
+  "author": "Ivan Lisin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iFoxMan/backend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/iFoxMan/backend-project-lvl1#readme"
+}
