@@ -1,20 +1,25 @@
 import readlineSync from 'readline-sync';
 
-export const brainGames = () => {
-  console.log('Welcome to the Brain Games!\n');
+/**
+ * @param {String} message -- rules of the game or question
+ */
+const welcome = (message) => {
+  console.log(`Welcome to the Brain Games!\n${message}`);
 
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
+
+  return name;
+};
+
+export const brainGames = () => {
+  welcome();
 };
 
 const randNum = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 export const brainEven = () => {
-  console.log('Welcome to the Brain Games!');
-  console.log('Answer "yes" if the number is even, otherwise answer "no".\n');
-
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!\n`);
+  const name = welcome('Answer "yes" if the number is even, otherwise answer "no".\n');
 
   for (let count = 0; count < 3;) {
     const num = randNum(0, 100);
@@ -55,11 +60,7 @@ const operate = (num1, operator, num2) => {
 };
 
 export const brainCalc = () => {
-  console.log('Welcome to the Brain Games!');
-  console.log('What is the result of the expression?\n');
-
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!\n`);
+  const name = welcome('What is the result of the expression?\n');
 
   for (let count = 0; count < 3;) {
     const num1 = randNum(0, 100);
