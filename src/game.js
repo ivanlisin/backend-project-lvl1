@@ -9,7 +9,7 @@ export const welcome = (intro = '') => {
   return username;
 };
 
-export const createGame = () => (intro, toDo, askUser, genArgs) => {
+export const createGame = (intro, toDo, askUser, genArgs) => () => {
   const username = welcome(intro);
 
   for (let count = 0; count < 3;) {
