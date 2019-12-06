@@ -6,6 +6,10 @@
 
 ## Guide
 
-### install package and run brain-even
+### install package from github and run brain-even
 
 [![asciicast](https://asciinema.org/a/DL4O219WI2lkbIA1jexQqLlrd.svg)](https://asciinema.org/a/DL4O219WI2lkbIA1jexQqLlrd)
+
+### install package from npm and run brain-calc
+
+[![asciicast](https://asciinema.org/a/0U2DHm2StNmkjMCSpOzz4Z8NQ.svg)](https://asciinema.org/a/0U2DHm2StNmkjMCSpOzz4Z8NQ)
