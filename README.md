@@ -6,7 +6,7 @@
 
 ## Guide
 
-### install package from github and run brain-even
+### download source code from github, install package, run brain-even
 
 [![asciicast](https://asciinema.org/a/DL4O219WI2lkbIA1jexQqLlrd.svg)](https://asciinema.org/a/DL4O219WI2lkbIA1jexQqLlrd)
 
@@ -17,3 +17,7 @@
 ### install package from npm and run brain-gcd
 
 [![asciicast](https://asciinema.org/a/yjD8q835tsDXCwbu6hFTB2j4B.svg)](https://asciinema.org/a/yjD8q835tsDXCwbu6hFTB2j4B)
+
+### install package from npm and run brain-progression
+
+[![asciicast](https://asciinema.org/a/2UoS4jfWpOpCgErht4TsHTdow.svg)](https://asciinema.org/a/2UoS4jfWpOpCgErht4TsHTdow)
