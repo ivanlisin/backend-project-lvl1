@@ -13,3 +13,7 @@
 ### install package from npm and run brain-calc
 
 [![asciicast](https://asciinema.org/a/0U2DHm2StNmkjMCSpOzz4Z8NQ.svg)](https://asciinema.org/a/0U2DHm2StNmkjMCSpOzz4Z8NQ)
+
+### install package from npm and run brain-gcd
+
+[![asciicast](https://asciinema.org/a/yjD8q835tsDXCwbu6hFTB2j4B.svg)](https://asciinema.org/a/yjD8q835tsDXCwbu6hFTB2j4B)
