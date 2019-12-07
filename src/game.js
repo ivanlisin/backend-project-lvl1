@@ -9,10 +9,10 @@ export const welcome = (intro = '') => {
   return username;
 };
 
-export const createGame = (intro, toDo, askUser, genArgs) => () => {
+export const createGame = (intro, toDo, askUser, genArgs, goal = 3) => () => {
   const username = welcome(intro);
 
-  for (let count = 0; count < 3;) {
+  for (let count = 0; count < goal;) {
     const args = genArgs();
 
     const result = toDo(args);
