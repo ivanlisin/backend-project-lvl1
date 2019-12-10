@@ -21,3 +21,7 @@
 ### install package from npm and run brain-progression
 
 [![asciicast](https://asciinema.org/a/2UoS4jfWpOpCgErht4TsHTdow.svg)](https://asciinema.org/a/2UoS4jfWpOpCgErht4TsHTdow)
+
+### install package from npm and run brain-prime
+
+[![asciicast](https://asciinema.org/a/jRlTvvxKsk7m4mG8zwa2f7QNE.svg)](https://asciinema.org/a/jRlTvvxKsk7m4mG8zwa2f7QNE)
