@@ -23,7 +23,7 @@ export default () => {
     return undefined;
   };
   const askUser = ([num1, num2]) => Number(readlineSync.question(`Question: ${num1} ${num2}\nYour answer: `));
-  const genPairNum = () => [randNum(0, 5), randNum(0, 5)];
+  const genPairNum = () => [randNum(0, 20), randNum(0, 20)];
 
   const play = createGame(task, pickUpGcd, askUser, genPairNum);
   play();

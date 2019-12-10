@@ -16,7 +16,7 @@ export default () => {
     }
   };
   const askUser = ([num1, operator, num2]) => Number(readlineSync.question(`Question: ${num1} ${operator} ${num2}\nYour answer: `));
-  const genExpression = () => [randNum(0, 5), randItem(['+', '-', '*']), randNum(0, 5)];
+  const genExpression = () => [randNum(0, 10), randItem(['+', '-', '*']), randNum(0, 10)];
 
   const play = createGame(question, calculate, askUser, genExpression);
   play();

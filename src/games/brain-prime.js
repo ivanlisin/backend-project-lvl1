@@ -2,8 +2,9 @@ import readlineSync from 'readline-sync';
 import { randNum, createGame } from '../logic';
 
 export default () => {
-  const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
   const primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29];
+
+  const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".\n';
   const isPrime = (num) => (primes.includes(num) ? 'yes' : 'no');
   const askUser = (num) => readlineSync.question(`Question: ${num}\nYour answer: `);
   const genNum = () => {
