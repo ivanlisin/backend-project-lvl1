@@ -9,6 +9,10 @@ export const welcome = (intro = '') => {
   return username;
 };
 
+export const randNum = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+
+export const randItem = (arr) => arr[randNum(0, arr.length - 1)];
+
 export const createGame = (intro, toDo, askUser, genArgs, goal = 3) => () => {
   const username = welcome(intro);
 
