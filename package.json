@@ -1,7 +1,15 @@
 {
   "name": "backend-project-lvl1-ifoxman",
   "version": "1.3.0",
-  "description": "",
+  "description": "backend project. level 1. hexlet.io",
+  "keywords": [
+    "backend",
+    "project",
+    "lvl1",
+    "js",
+    "javascript",
+    "nodejs"
+  ],
   "main": "dist/index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
