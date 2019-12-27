@@ -1,3 +1,3 @@
-import welcome from '../logic';
+import { welcome } from '../logic';
 
 export default () => welcome();
