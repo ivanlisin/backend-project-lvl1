@@ -6,22 +6,48 @@
 
 ## Guide
 
-### download source code from github, install package, run brain-even
+### Installation from github
 
-[![asciicast](https://asciinema.org/a/DL4O219WI2lkbIA1jexQqLlrd.svg)](https://asciinema.org/a/DL4O219WI2lkbIA1jexQqLlrd)
+```console
+git clone https://github.com/iFoxMan/backend-project-lvl1
 
-### install package from npm and run brain-calc
+cd backend-project-lvl1
 
-[![asciicast](https://asciinema.org/a/0U2DHm2StNmkjMCSpOzz4Z8NQ.svg)](https://asciinema.org/a/0U2DHm2StNmkjMCSpOzz4Z8NQ)
+make install
 
-### install package from npm and run brain-gcd
+make publish
 
-[![asciicast](https://asciinema.org/a/yjD8q835tsDXCwbu6hFTB2j4B.svg)](https://asciinema.org/a/yjD8q835tsDXCwbu6hFTB2j4B)
+npm link .
+```
 
-### install package from npm and run brain-progression
+[![asciicast](https://asciinema.org/a/o0GSSa3xOqemdBP0CD78v4KEZ.svg)](https://asciinema.org/a/o0GSSa3xOqemdBP0CD78v4KEZ)
 
-[![asciicast](https://asciinema.org/a/2UoS4jfWpOpCgErht4TsHTdow.svg)](https://asciinema.org/a/2UoS4jfWpOpCgErht4TsHTdow)
+### Installation from npm
 
-### install package from npm and run brain-prime
+```console
+npm install -g backend-project-lvl1-ifoxman
 
-[![asciicast](https://asciinema.org/a/jRlTvvxKsk7m4mG8zwa2f7QNE.svg)](https://asciinema.org/a/jRlTvvxKsk7m4mG8zwa2f7QNE)
+npm link backend-project-lvl1-ifoxman
+```
+
+[![asciicast](https://asciinema.org/a/TKgXVdr71DvWLp8o6O1qGU7FQ.svg)](https://asciinema.org/a/TKgXVdr71DvWLp8o6O1qGU7FQ)
+
+### brain-even
+
+[![asciicast](https://asciinema.org/a/ZBzgNkD7kckotr3DLI179QPvv.svg)](https://asciinema.org/a/ZBzgNkD7kckotr3DLI179QPvv)
+
+### brain-calc
+
+[![asciicast](https://asciinema.org/a/7thfT3ONmgmQWPdmx1VWQRAIG.svg)](https://asciinema.org/a/7thfT3ONmgmQWPdmx1VWQRAIG)
+
+### brain-gcd
+
+[![asciicast](https://asciinema.org/a/UmWAps6AbrxyZCcd8uHYX8Igw.svg)](https://asciinema.org/a/UmWAps6AbrxyZCcd8uHYX8Igw)
+
+### brain-progression
+
+[![asciicast](https://asciinema.org/a/qYnnupAR2xu2edpzDA6wZbjEr.svg)](https://asciinema.org/a/qYnnupAR2xu2edpzDA6wZbjEr)
+
+### brain-prime
+
+[![asciicast](https://asciinema.org/a/O0KxBLZnY9bI8xGTetMAE4qNK.svg)](https://asciinema.org/a/O0KxBLZnY9bI8xGTetMAE4qNK)
