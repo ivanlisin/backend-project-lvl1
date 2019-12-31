@@ -1,4 +1,4 @@
-import play from './logic';
+import play from './engine';
 
 const randNum = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
