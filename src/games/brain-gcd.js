@@ -1,8 +1,8 @@
-import readlineSync from 'readline-sync';
-import { play, randNum } from '..';
+import { randNum, play } from '..';
 
 export default () => {
-  const task = 'Find the greatest common divisor of given numbers\n';
+  const task = 'Find the greatest common divisor of given numbers';
+  const genPairNum = () => [randNum(0, 19), randNum(0, 19)];
   const pickUpGcd = ([num1, num2]) => {
     if (num1 === 0 || num2 === 0) {
       return 0;
@@ -22,8 +22,6 @@ export default () => {
 
     return undefined;
   };
-  const askUser = ([num1, num2]) => Number(readlineSync.question(`Question: ${num1} ${num2}\nYour answer: `));
-  const genPairNum = () => [randNum(0, 20), randNum(0, 20)];
 
-  play(task, pickUpGcd, askUser, genPairNum);
+  play(task, genPairNum, pickUpGcd);
 };

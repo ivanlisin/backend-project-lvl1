@@ -1,8 +1,8 @@
-import readlineSync from 'readline-sync';
-import { play, randNum, randItem } from '..';
+import { randNum, randItem, play } from '..';
 
 export default () => {
-  const question = 'What is the result of the expression?\n';
+  const question = 'What is the result of the expression?';
+  const genExpression = () => [randNum(0, 9), randItem(['+', '-', '*']), randNum(0, 9)];
   const calculate = ([num1, operator, num2]) => {
     switch (operator) {
       case '+':
@@ -15,8 +15,6 @@ export default () => {
         return undefined;
     }
   };
-  const askUser = ([num1, operator, num2]) => Number(readlineSync.question(`Question: ${num1} ${operator} ${num2}\nYour answer: `));
-  const genExpression = () => [randNum(0, 10), randItem(['+', '-', '*']), randNum(0, 10)];
 
-  play(question, calculate, askUser, genExpression);
+  play(question, genExpression, calculate);
 };

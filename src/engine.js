@@ -1,16 +1,41 @@
 import readlineSync from 'readline-sync';
 
-export default (intro, toDo, askUser, genArgs, goal = 3) => {
-  console.log(`Welcome to the Brain Games!\n${intro}`);
+const toString = (args) => {
+  if (Number.isInteger(args)) {
+    return `${args}`;
+  }
+
+  if (Array.isArray(args)) {
+    let acc = '';
+    args.forEach((currentValue, index) => {
+      switch (index) {
+        case 0:
+          acc += `${currentValue}`;
+          break;
+
+        default:
+          acc += ` ${currentValue}`;
+          break;
+      }
+    });
+
+    return acc;
+  }
+
+  return undefined;
+};
+
+export default (intro, getArgs, toDo, goal = 3) => {
+  console.log(`Welcome to the Brain Games!\n${intro}\n`);
 
   const username = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${username}!\n`);
 
   for (let count = 0; count < goal;) {
-    const args = genArgs();
+    const args = getArgs();
 
-    const result = toDo(args);
-    const answer = askUser(args);
+    const result = String(toDo(args));
+    const answer = readlineSync.question(`Question: ${toString(args)}\nYour answer: `);
 
     switch (result === answer) {
       case true:
