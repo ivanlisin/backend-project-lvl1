@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { randNum, createGame } from '../logic';
+import { play, randNum } from '..';
 
 export default () => {
   const rules = 'Answer "yes" if the number is even, otherwise answer "no".\n';
@@ -7,6 +7,5 @@ export default () => {
   const askUser = (num) => readlineSync.question(`Question: ${num}\nYour answer: `);
   const genNum = () => randNum(0, 100);
 
-  const play = createGame(rules, checkParity, askUser, genNum);
-  play();
+  play(rules, checkParity, askUser, genNum);
 };

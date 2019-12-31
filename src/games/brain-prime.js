@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { randNum, createGame } from '../logic';
+import { play, randNum } from '..';
 
 export default () => {
   const primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29];
@@ -13,6 +13,5 @@ export default () => {
     return (rand % 2 === 0) ? primes[rand / 2] : noPrimes[(rand - 1) / 2];
   };
 
-  const play = createGame(rules, isPrime, askUser, genNum);
-  play();
+  play(rules, isPrime, askUser, genNum);
 };

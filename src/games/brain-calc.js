@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { randNum, randItem, createGame } from '../logic';
+import { play, randNum, randItem } from '..';
 
 export default () => {
   const question = 'What is the result of the expression?\n';
@@ -18,6 +18,5 @@ export default () => {
   const askUser = ([num1, operator, num2]) => Number(readlineSync.question(`Question: ${num1} ${operator} ${num2}\nYour answer: `));
   const genExpression = () => [randNum(0, 10), randItem(['+', '-', '*']), randNum(0, 10)];
 
-  const play = createGame(question, calculate, askUser, genExpression);
-  play();
+  play(question, calculate, askUser, genExpression);
 };

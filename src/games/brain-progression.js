@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { randNum, createGame } from '../logic';
+import { play, randNum } from '..';
 
 export default () => {
   const question = 'What number is missing in the progression?\n';
@@ -35,6 +35,5 @@ export default () => {
     return [genKey(length), genProgression(length, rules[num])];
   };
 
-  const play = createGame(question, getClue, askUser, genPair);
-  play();
+  play(question, getClue, askUser, genPair);
 };

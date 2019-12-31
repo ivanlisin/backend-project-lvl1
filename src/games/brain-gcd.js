@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { randNum, createGame } from '../logic';
+import { play, randNum } from '..';
 
 export default () => {
   const task = 'Find the greatest common divisor of given numbers\n';
@@ -25,6 +25,5 @@ export default () => {
   const askUser = ([num1, num2]) => Number(readlineSync.question(`Question: ${num1} ${num2}\nYour answer: `));
   const genPairNum = () => [randNum(0, 20), randNum(0, 20)];
 
-  const play = createGame(task, pickUpGcd, askUser, genPairNum);
-  play();
+  play(task, pickUpGcd, askUser, genPairNum);
 };
