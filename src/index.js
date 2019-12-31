@@ -1,15 +1,7 @@
-import brainGames from './games/brain-games';
-import brainEven from './games/brain-even';
-import brainCalc from './games/brain-calc';
-import brainGcd from './games/brain-gcd';
-import brainProgression from './games/brain-progression';
-import brainPrime from './games/brain-prime';
+import play from './logic';
 
-export {
-  brainGames,
-  brainEven,
-  brainCalc,
-  brainGcd,
-  brainProgression,
-  brainPrime,
-};
+const randNum = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+
+const randItem = (arr) => arr[randNum(0, arr.length - 1)];
+
+export { play, randNum, randItem };
