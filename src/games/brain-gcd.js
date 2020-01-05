@@ -1,8 +1,8 @@
-import { randNum, play } from '..';
+import { getRandNum, play } from '..';
 
 export default () => {
   const task = 'Find the greatest common divisor of given numbers';
-  const genPairNum = () => [randNum(0, 19), randNum(0, 19)];
+  const genPairNum = () => [getRandNum(0, 19), getRandNum(0, 19)];
   const pickUpGcd = ([num1, num2]) => {
     if (num1 === 0 || num2 === 0) {
       return 0;

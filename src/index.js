@@ -1,4 +1,4 @@
 import play from './engine';
-import { randNum, randItem } from './utils';
+import { getRandNum, getRandItem } from './utils';
 
-export { play, randNum, randItem };
+export { play, getRandNum, getRandItem };

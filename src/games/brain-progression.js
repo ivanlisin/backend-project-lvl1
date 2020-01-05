@@ -1,4 +1,4 @@
-import { randNum, play } from '..';
+import { getRandNum, play } from '..';
 
 export default () => {
   const rules = [
@@ -7,12 +7,12 @@ export default () => {
     (index) => (index + 1) * 2,
     (index) => index ** 2,
   ];
-  const getItem = rules[randNum(0, rules.length - 1)];
+  const getItem = rules[getRandNum(0, rules.length - 1)];
 
   const question = 'What number is missing in the progression?';
   const genExpression = () => {
     const length = 10;
-    const skip = randNum(0, length - 1);
+    const skip = getRandNum(0, length - 1);
     const expression = [];
     for (let i = 0; i < length; i += 1) {
       switch (i) {
