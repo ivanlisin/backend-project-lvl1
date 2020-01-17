@@ -1,43 +1,16 @@
 import readlineSync from 'readline-sync';
+import { car as getTask, cdr as getResult } from '@hexlet/pairs';
 
-const toString = (args) => {
-  if (Number.isInteger(args)) {
-    return `${args}`;
-  }
+const attemptsCount = 3;
 
-  if (Array.isArray(args)) {
-    let acc = '';
-    args.forEach((currentValue, index) => {
-      switch (index) {
-        case 0:
-          acc += `${currentValue}`;
-          break;
+export default (username, getGame) => {
+  for (let count = 0; count < attemptsCount;) {
+    const game = getGame();
 
-        default:
-          acc += ` ${currentValue}`;
-          break;
-      }
-    });
+    const answer = readlineSync.question(`Question: ${getTask(game)}\nYour answer: `);
+    const result = getResult(game);
 
-    return acc;
-  }
-
-  return undefined;
-};
-
-export default (intro, getArgs, toDo, goal = 3) => {
-  console.log(`Welcome to the Brain Games!\n${intro}\n`);
-
-  const username = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${username}!\n`);
-
-  for (let count = 0; count < goal;) {
-    const args = getArgs();
-
-    const result = String(toDo(args));
-    const answer = readlineSync.question(`Question: ${toString(args)}\nYour answer: `);
-
-    switch (result === answer) {
+    switch (answer === result) {
       case true:
         console.log('Correct!');
         count += 1;
@@ -48,6 +21,4 @@ export default (intro, getArgs, toDo, goal = 3) => {
         break;
     }
   }
-
-  console.log(`Congratulations, ${username}!`);
 };
