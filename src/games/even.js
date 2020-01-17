@@ -1,9 +1,12 @@
-import { getRandNum, play } from '..';
+import { getRandomNumber } from '../random';
+import play from '..';
 
-export default () => {
-  const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const genNum = () => getRandNum(0, 99);
-  const checkParity = (num) => ((num % 2 === 0) ? 'yes' : 'no');
+const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  play(rules, genNum, checkParity);
-};
+const getNumber = () => getRandomNumber(0, 99);
+
+const toString = (num) => `${num}`;
+
+const checkParity = (num) => ((num % 2 === 0) ? 'yes' : 'no');
+
+export default () => play(rule, getNumber, toString, checkParity);

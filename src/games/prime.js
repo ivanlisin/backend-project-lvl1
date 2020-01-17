@@ -1,17 +1,24 @@
-import { getRandNum, play } from '..';
+import { getRandomNumber } from '../random';
+import play from '..';
 
-export default () => {
-  const primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29];
+const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  const rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const genNum = () => {
-    const noPrimes = [0, 1, 4, 6, 9, 12, 15, 18, 21, 26];
-    const length = primes.length + noPrimes.length;
-    const rand = getRandNum(0, length - 1);
+const getNumber = () => getRandomNumber(0, 29);
 
-    return (rand % 2 === 0) ? primes[rand / 2] : noPrimes[(rand - 1) / 2];
-  };
-  const isPrime = (num) => (primes.includes(num) ? 'yes' : 'no');
+const toString = (num) => `${num}`;
 
-  play(rules, genNum, isPrime);
+const checkPrime = (num) => {
+  if (num < 2) {
+    return 'no';
+  }
+
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) {
+      return 'no';
+    }
+  }
+
+  return 'yes';
 };
+
+export default () => play(rule, getNumber, toString, checkPrime);
