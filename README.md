@@ -20,17 +20,15 @@ make publish
 npm link .
 ```
 
-[![asciicast](https://asciinema.org/a/o0GSSa3xOqemdBP0CD78v4KEZ.svg)](https://asciinema.org/a/o0GSSa3xOqemdBP0CD78v4KEZ)
+[![asciicast](https://asciinema.org/a/7XxWusAahahVUUpl0fqM8KEqo.svg)](https://asciinema.org/a/7XxWusAahahVUUpl0fqM8KEqo)
 
 ### Installation from npm
 
 ```console
 npm install -g backend-project-lvl1-ifoxman
-
-npm link backend-project-lvl1-ifoxman
 ```
 
-[![asciicast](https://asciinema.org/a/TKgXVdr71DvWLp8o6O1qGU7FQ.svg)](https://asciinema.org/a/TKgXVdr71DvWLp8o6O1qGU7FQ)
+[![asciicast](https://asciinema.org/a/OaAhdd3xKYIQK5KDFPbIVAE1Y.svg)](https://asciinema.org/a/OaAhdd3xKYIQK5KDFPbIVAE1Y)
 
 ### brain-even
 
