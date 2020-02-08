@@ -5,13 +5,12 @@ import play from '..';
 const needToDo = 'Find the greatest common divisor of given numbers';
 
 const pickUpGcd = (num1, num2) => {
-  if (num1 < 1 || num2 < 1) {
-    return null;
-  }
+  const modNum1 = Math.abs(num1);
+  const modNum2 = Math.abs(num2);
 
-  const max = (num1 > num2) ? num1 : num2;
+  const max = (modNum1 > modNum2) ? modNum1 : modNum2;
   for (let i = max; i > 0; i -= 1) {
-    const isGcd = (num1 % i === 0) && (num2 % i === 0);
+    const isGcd = (modNum1 % i === 0) && (modNum2 % i === 0);
     if (isGcd) {
       return i;
     }
@@ -21,7 +20,7 @@ const pickUpGcd = (num1, num2) => {
 };
 
 const getTask = () => {
-  const numbers = [getRandomNumber(1, 20), getRandomNumber(1, 20)];
+  const numbers = [getRandomNumber(-20, 20), getRandomNumber(-20, 20)];
 
   const description = numbers.join(' ');
   const result = `${pickUpGcd(...numbers)}`;
