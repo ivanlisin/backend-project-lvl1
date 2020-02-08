@@ -1,3 +1,4 @@
+import { cons } from '@hexlet/pairs';
 import { getRandomNumber } from '../random';
 import play from '..';
 
@@ -30,8 +31,6 @@ const getProgression = () => {
   return expression;
 };
 
-const toString = (arr) => arr.toString();
-
 const calculate = (progression) => {
   for (let i = 0; i < progression.length; i += 1) {
     switch (progression[i]) {
@@ -42,7 +41,17 @@ const calculate = (progression) => {
     }
   }
 
-  return 'wrong progression';
+  return null;
 };
 
-export default () => play(question, getProgression, toString, calculate);
+const getTask = () => {
+  const progression = getProgression();
+
+  const description = progression.toString();
+  const result = `${calculate(progression)}`;
+
+  const task = cons(description, result);
+  return task;
+};
+
+export default () => play(question, getTask);

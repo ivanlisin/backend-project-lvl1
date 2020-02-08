@@ -1,14 +1,14 @@
 import readlineSync from 'readline-sync';
-import { car as getTask, cdr as getResult } from '@hexlet/pairs';
+import { car as getDescription, cdr as getResult } from '@hexlet/pairs';
 
 const attemptsCount = 3;
 
-export default (username, getGame) => {
+export default (username, getTask) => {
   for (let count = 0; count < attemptsCount;) {
-    const game = getGame();
+    const task = getTask();
 
-    const answer = readlineSync.question(`Question: ${getTask(game)}\nYour answer: `);
-    const result = getResult(game);
+    const answer = readlineSync.question(`Question: ${getDescription(task)}\nYour answer: `);
+    const result = getResult(task);
 
     switch (answer === result) {
       case true:

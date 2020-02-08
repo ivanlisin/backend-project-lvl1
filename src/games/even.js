@@ -1,12 +1,19 @@
+import { cons } from '@hexlet/pairs';
 import { getRandomNumber } from '../random';
 import play from '..';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const getNumber = () => getRandomNumber(0, 99);
+const isPrime = (num) => num % 2 === 0;
 
-const toString = (num) => `${num}`;
+const getTask = () => {
+  const number = getRandomNumber(0, 99);
 
-const checkParity = (num) => ((num % 2 === 0) ? 'yes' : 'no');
+  const description = `${number}`;
+  const result = isPrime(number) ? 'yes' : 'no';
 
-export default () => play(rule, getNumber, toString, checkParity);
+  const task = cons(description, result);
+  return task;
+};
+
+export default () => play(rule, getTask);
