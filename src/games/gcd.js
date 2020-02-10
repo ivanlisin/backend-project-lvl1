@@ -2,7 +2,7 @@ import { cons } from '@hexlet/pairs';
 import getRandomNumber from '../random';
 import play from '..';
 
-const needToDo = 'Find the greatest common divisor of given numbers';
+const description = 'Find the greatest common divisor of given numbers';
 
 const pickUpGcd = (num1, num2) => {
   const modNum1 = Math.abs(num1);
@@ -22,11 +22,11 @@ const pickUpGcd = (num1, num2) => {
 const getTask = () => {
   const numbers = [getRandomNumber(-20, 20), getRandomNumber(-20, 20)];
 
-  const description = numbers.join(' ');
-  const result = `${pickUpGcd(...numbers)}`;
+  const question = numbers.join(' ');
+  const answer = `${pickUpGcd(...numbers)}`;
 
-  const task = cons(description, result);
+  const task = cons(question, answer);
   return task;
 };
 
-export default () => play(needToDo, getTask);
+export default () => play(description, getTask);

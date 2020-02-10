@@ -2,7 +2,7 @@ import { cons } from '@hexlet/pairs';
 import getRandomNumber from '../random';
 import play from '..';
 
-const question = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const formulas = [
   (index) => index,
@@ -47,11 +47,11 @@ const calculate = (progression) => {
 const getTask = () => {
   const progression = getProgression();
 
-  const description = progression.toString();
-  const result = `${calculate(progression)}`;
+  const question = progression.toString();
+  const answer = `${calculate(progression)}`;
 
-  const task = cons(description, result);
+  const task = cons(question, answer);
   return task;
 };
 
-export default () => play(question, getTask);
+export default () => play(description, getTask);

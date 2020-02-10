@@ -2,7 +2,7 @@ import { cons } from '@hexlet/pairs';
 import getRandomNumber from '../random';
 import play from '..';
 
-const question = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
 export const getRandomItem = (items) => items[getRandomNumber(0, items.length - 1)];
 
@@ -22,11 +22,11 @@ const calculate = (num1, operator, num2) => {
 const getTask = () => {
   const expression = [getRandomNumber(0, 9), getRandomItem(['+', '-', '*']), getRandomNumber(0, 9)];
 
-  const description = expression.join(' ');
-  const result = `${calculate(...expression)}`;
+  const question = expression.join(' ');
+  const ansewer = `${calculate(...expression)}`;
 
-  const task = cons(description, result);
+  const task = cons(question, ansewer);
   return task;
 };
 
-export default () => play(question, getTask);
+export default () => play(description, getTask);
