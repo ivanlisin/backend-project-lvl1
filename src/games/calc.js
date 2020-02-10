@@ -1,8 +1,10 @@
 import { cons } from '@hexlet/pairs';
-import { getRandomNumber, getRandomItem } from '../random';
+import getRandomNumber from '../random';
 import play from '..';
 
 const question = 'What is the result of the expression?';
+
+export const getRandomItem = (items) => items[getRandomNumber(0, items.length - 1)];
 
 const calculate = (num1, operator, num2) => {
   switch (operator) {

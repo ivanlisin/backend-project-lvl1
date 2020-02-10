@@ -1,5 +1,5 @@
 import { cons } from '@hexlet/pairs';
-import { getRandomNumber } from '../random';
+import getRandomNumber from '../random';
 import play from '..';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
