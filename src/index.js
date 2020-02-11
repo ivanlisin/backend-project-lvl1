@@ -9,23 +9,24 @@ export default (description, getTask) => {
   const username = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${username}!\n`);
 
-  for (let count = 0; count < attemptsCount;) {
+  let count = 0;
+  while (count < attemptsCount) {
     const task = getTask();
 
     const guess = readlineSync.question(`Question: ${getQuestion(task)}\nYour answer: `);
     const truth = getAnswer(task);
 
-    switch (guess === truth) {
-      case true:
-        console.log('Correct!');
-        count += 1;
-        break;
-      default:
-        console.log(`'${guess}' is wrong answer ;(. Correct answer was '${truth}'\nLet's try again, ${username}!`);
-        count = 0;
-        break;
+    if (guess !== truth) {
+      console.log(`'${guess}' is wrong answer ;(. Correct answer was '${truth}'\nLet's try again, ${username}!`);
+      break;
     }
+
+    console.log('Correct!');
+    count += 1;
   }
 
-  console.log(`Congratulations, ${username}!`);
+  const isWin = count === attemptsCount;
+  if (isWin) {
+    console.log(`Congratulations, ${username}!`);
+  }
 };
