@@ -4,18 +4,20 @@ import play from '..';
 
 const description = 'What number is missing in the progression?';
 
+const [min, max] = [0, 9];
+
 const [first, diff, length] = [
-  getRandomNumber(0, 10),
-  getRandomNumber(1, 5),
-  10,
+  getRandomNumber(min, max),
+  getRandomNumber(min, max),
+  max + 1,
 ];
-const getItem = (index) => first + index * diff;
+const getProgressionItem = (index) => String(first + index * diff);
 
 const getQuestion = (hiddenIndex) => {
   const result = [];
 
   for (let i = 0; i < length; i += 1) {
-    const item = String(getItem(i));
+    const item = getProgressionItem(i);
     switch (i) {
       case hiddenIndex:
         result.push('..');
@@ -29,13 +31,11 @@ const getQuestion = (hiddenIndex) => {
   return result.join(',');
 };
 
-const getAnswer = (hiddenIndex) => String(getItem(hiddenIndex));
-
 const getTask = () => {
-  const hiddenIndex = getRandomNumber(0, length - 1);
+  const hiddenIndex = getRandomNumber(min, max);
 
   const question = getQuestion(hiddenIndex);
-  const answer = getAnswer(hiddenIndex);
+  const answer = getProgressionItem(hiddenIndex);
 
   const task = cons(question, answer);
   return task;

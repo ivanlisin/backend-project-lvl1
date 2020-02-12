@@ -4,7 +4,14 @@ import play from '..';
 
 const description = 'What is the result of the expression?';
 
-export const getRandomItem = (items) => items[getRandomNumber(0, items.length - 1)];
+const [min, max] = [0, 9];
+
+const operators = ['+', '-', '*'];
+const getOperator = () => {
+  const [firstIndex, lastIndex] = [0, operators.length - 1];
+  const index = getRandomNumber(firstIndex, lastIndex);
+  return operators[index];
+};
 
 const calculate = (num1, operator, num2) => {
   switch (operator) {
@@ -20,15 +27,16 @@ const calculate = (num1, operator, num2) => {
 };
 
 const getTask = () => {
-  const [num1, num2] = [getRandomNumber(0, 9), getRandomNumber(0, 9)];
-  const operator = getRandomItem(['+', '-', '*']);
+  const [num1, operator, num2] = [
+    getRandomNumber(min, max),
+    getOperator(),
+    getRandomNumber(min, max),
+  ];
 
-  const expression = [num1, operator, num2];
+  const question = `${num1} ${operator} ${num2}`;
+  const answer = String(calculate(num1, operator, num2));
 
-  const question = expression.join(' ');
-  const ansewer = `${calculate(...expression)}`;
-
-  const task = cons(question, ansewer);
+  const task = cons(question, answer);
   return task;
 };
 
