@@ -4,51 +4,38 @@ import play from '..';
 
 const description = 'What number is missing in the progression?';
 
-const formulas = [
-  (index) => index,
-  (index) => index * 2,
-  (index) => (index + 1) * 2,
-  (index) => index ** 2,
+const [first, diff, length] = [
+  getRandomNumber(0, 10),
+  getRandomNumber(1, 5),
+  10,
 ];
-const index = getRandomNumber(0, formulas.length - 1);
-const getItem = formulas[index];
+const getItem = (index) => first + index * diff;
 
-const length = 10;
-const getProgression = () => {
-  const skip = getRandomNumber(0, length - 1);
-  const expression = [];
+const getQuestion = (hiddenIndex) => {
+  const result = [];
+
   for (let i = 0; i < length; i += 1) {
+    const item = String(getItem(i));
     switch (i) {
-      case skip:
-        expression.push('..');
+      case hiddenIndex:
+        result.push('..');
         break;
+
       default:
-        expression.push(getItem(i));
-        break;
+        result.push(item);
     }
   }
 
-  return expression;
+  return result.join(',');
 };
 
-const calculate = (progression) => {
-  for (let i = 0; i < progression.length; i += 1) {
-    switch (progression[i]) {
-      case '..':
-        return `${getItem(i)}`;
-      default:
-        break;
-    }
-  }
-
-  return null;
-};
+const getAnswer = (hiddenIndex) => String(getItem(hiddenIndex));
 
 const getTask = () => {
-  const progression = getProgression();
+  const hiddenIndex = getRandomNumber(0, length - 1);
 
-  const question = progression.toString();
-  const answer = `${calculate(progression)}`;
+  const question = getQuestion(hiddenIndex);
+  const answer = getAnswer(hiddenIndex);
 
   const task = cons(question, answer);
   return task;

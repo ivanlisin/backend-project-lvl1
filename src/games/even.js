@@ -9,7 +9,7 @@ const isPrime = (num) => num % 2 === 0;
 const getTask = () => {
   const number = getRandomNumber(0, 99);
 
-  const question = `${number}`;
+  const question = number.toString();
   const answer = isPrime(number) ? 'yes' : 'no';
 
   const task = cons(question, answer);

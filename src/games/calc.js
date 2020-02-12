@@ -20,7 +20,10 @@ const calculate = (num1, operator, num2) => {
 };
 
 const getTask = () => {
-  const expression = [getRandomNumber(0, 9), getRandomItem(['+', '-', '*']), getRandomNumber(0, 9)];
+  const [num1, num2] = [getRandomNumber(0, 9), getRandomNumber(0, 9)];
+  const operator = getRandomItem(['+', '-', '*']);
+
+  const expression = [num1, operator, num2];
 
   const question = expression.join(' ');
   const ansewer = `${calculate(...expression)}`;
