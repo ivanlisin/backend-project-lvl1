@@ -20,7 +20,7 @@ make publish
 npm link .
 ```
 
-[![asciicast](https://asciinema.org/a/7XxWusAahahVUUpl0fqM8KEqo.svg)](https://asciinema.org/a/7XxWusAahahVUUpl0fqM8KEqo)
+[![asciicast](https://asciinema.org/a/OS1G0zIQWqfbZWhlYVrUgoH1a.svg)](https://asciinema.org/a/OS1G0zIQWqfbZWhlYVrUgoH1a)
 
 ### Installation from npm
 
@@ -28,24 +28,24 @@ npm link .
 npm install -g backend-project-lvl1-ifoxman
 ```
 
-[![asciicast](https://asciinema.org/a/OaAhdd3xKYIQK5KDFPbIVAE1Y.svg)](https://asciinema.org/a/OaAhdd3xKYIQK5KDFPbIVAE1Y)
+[![asciicast](https://asciinema.org/a/wr6d6TPC9ew5ad55ZE5sllVXG.svg)](https://asciinema.org/a/wr6d6TPC9ew5ad55ZE5sllVXG)
 
 ### brain-even
 
-[![asciicast](https://asciinema.org/a/ZBzgNkD7kckotr3DLI179QPvv.svg)](https://asciinema.org/a/ZBzgNkD7kckotr3DLI179QPvv)
+[![asciicast](https://asciinema.org/a/wjo0vkZjQXxlzQp1HILFNSk9s.svg)](https://asciinema.org/a/wjo0vkZjQXxlzQp1HILFNSk9s)
 
 ### brain-calc
 
-[![asciicast](https://asciinema.org/a/7thfT3ONmgmQWPdmx1VWQRAIG.svg)](https://asciinema.org/a/7thfT3ONmgmQWPdmx1VWQRAIG)
+[![asciicast](https://asciinema.org/a/6H1iWuyAtxwOVMUsxcDP01Pli.svg)](https://asciinema.org/a/6H1iWuyAtxwOVMUsxcDP01Pli)
 
 ### brain-gcd
 
-[![asciicast](https://asciinema.org/a/UmWAps6AbrxyZCcd8uHYX8Igw.svg)](https://asciinema.org/a/UmWAps6AbrxyZCcd8uHYX8Igw)
+[![asciicast](https://asciinema.org/a/VceDgBus4tAtA9hOQahGYhieC.svg)](https://asciinema.org/a/VceDgBus4tAtA9hOQahGYhieC)
 
 ### brain-progression
 
-[![asciicast](https://asciinema.org/a/qYnnupAR2xu2edpzDA6wZbjEr.svg)](https://asciinema.org/a/qYnnupAR2xu2edpzDA6wZbjEr)
+[![asciicast](https://asciinema.org/a/CUwkjhRhe2DoMcjsVfqg53ikJ.svg)](https://asciinema.org/a/CUwkjhRhe2DoMcjsVfqg53ikJ)
 
 ### brain-prime
 
-[![asciicast](https://asciinema.org/a/O0KxBLZnY9bI8xGTetMAE4qNK.svg)](https://asciinema.org/a/O0KxBLZnY9bI8xGTetMAE4qNK)
+[![asciicast](https://asciinema.org/a/06zA8UmuADfpRINfT6eI2ujVM.svg)](https://asciinema.org/a/06zA8UmuADfpRINfT6eI2ujVM)
