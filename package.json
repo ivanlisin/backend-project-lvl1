@@ -10,7 +10,7 @@
     "javascript",
     "nodejs"
   ],
-  "main": "dist/index.js",
+  "main": "",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
@@ -38,16 +38,18 @@
   },
   "homepage": "https://github.com/iFoxMan/backend-project-lvl1#readme",
   "dependencies": {
-    "@babel/cli": "^7.7.0",
-    "@babel/core": "^7.7.0",
-    "@babel/node": "^7.7.0",
-    "@babel/preset-env": "^7.7.1",
     "@hexlet/pairs": "^1.0.10",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.6.0",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-import": "^2.18.2",
-    "readline-sync": "^1.4.10"
+    "eslint-plugin-import": "^2.20.1"
   }
 }
