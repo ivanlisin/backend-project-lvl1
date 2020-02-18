@@ -18,12 +18,12 @@ export default (description, getTask) => {
 
     if (userAnswer !== correctAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
-      console.log(`Let's try again, ${username}!`);
+      console.log(`Let's try again, ${username}!\n`);
       return;
     }
 
     console.log('Correct!');
   }
 
-  console.log(`Congratulations, ${username}!`);
+  console.log(`Congratulations, ${username}!\n`);
 };
