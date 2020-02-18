@@ -4,18 +4,15 @@ import play from '..';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const [min, max] = [0, 99];
-
 const isEven = (num) => num % 2 === 0;
 
 const getTask = () => {
-  const number = getRandomNumber(min, max);
+  const num = getRandomNumber(0, 99);
 
-  const question = number.toString();
-  const answer = isEven(number) ? 'yes' : 'no';
+  const question = num.toString();
+  const answer = isEven(num) ? 'yes' : 'no';
 
-  const task = cons(question, answer);
-  return task;
+  return cons(question, answer);
 };
 
 export default () => play(description, getTask);

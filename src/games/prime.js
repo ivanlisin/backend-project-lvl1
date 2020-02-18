@@ -4,8 +4,6 @@ import play from '..';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const [min, max] = [0, 29];
-
 const isPrime = (num) => {
   if (num < 2) {
     return false;
@@ -21,13 +19,12 @@ const isPrime = (num) => {
 };
 
 const getTask = () => {
-  const number = getRandomNumber(min, max);
+  const num = getRandomNumber(0, 29);
 
-  const question = String(number);
-  const answer = isPrime(number) ? 'yes' : 'no';
+  const question = String(num);
+  const answer = isPrime(num) ? 'yes' : 'no';
 
-  const task = cons(question, answer);
-  return task;
+  return cons(question, answer);
 };
 
 export default () => play(description, getTask);

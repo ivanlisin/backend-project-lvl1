@@ -4,8 +4,6 @@ import play from '..';
 
 const description = 'Find the greatest common divisor of given numbers';
 
-const [min, max] = [1, 50];
-
 const gcd = (a, b) => {
   if (b === 0) {
     return a;
@@ -15,13 +13,13 @@ const gcd = (a, b) => {
 };
 
 const getTask = () => {
-  const [num1, num2] = [getRandomNumber(min, max), getRandomNumber(min, max)];
+  const num1 = getRandomNumber(1, 50);
+  const num2 = getRandomNumber(1, 50);
 
   const question = `${num1} ${num2}`;
   const answer = String(gcd(num1, num2));
 
-  const task = cons(question, answer);
-  return task;
+  return cons(question, answer);
 };
 
 export default () => play(description, getTask);
