@@ -1,9 +1,3 @@
-const getRandomNumber = (min, max) => {
-  const randFloat = Math.random();
-  const diff = max - min;
-  const randNum = Math.floor(randFloat * (diff + 1));
-
-  return randNum + min;
-};
+const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 export default getRandomNumber;
