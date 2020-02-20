@@ -13,7 +13,8 @@ export default (description, getTask) => {
   for (let count = 0; count < attemptsCount; count += 1) {
     const task = getTask();
 
-    const userAnswer = readlineSync.question(`Question: ${getQuestion(task)}\nYour answer: `);
+    console.log(`Question: ${getQuestion(task)}`);
+    const userAnswer = readlineSync.question('Your answer: ');
     const correctAnswer = getAnswer(task);
 
     if (userAnswer !== correctAnswer) {
