@@ -4,32 +4,32 @@ import play from '..';
 
 const description = 'What number is missing in the progression?';
 
-const length = 10;
+const progressionLength = 10;
 
-const getItem = (first, diff, index) => String(first + diff * index);
-
-const getQuestion = (first, diff, hiddenIndex) => {
+const getQuestion = (first, diff, hiddenItemIndex) => {
   const result = [];
 
-  for (let i = 0; i < length; i += 1) {
-    const item = getItem(first, diff, i);
-    if (i === hiddenIndex) {
+  for (let i = 0; i < progressionLength; i += 1) {
+    if (i === hiddenItemIndex) {
       result.push('..');
     } else {
-      result.push(item);
+      const item = first + diff * hiddenItemIndex;
+      result.push(String(item));
     }
   }
 
   return result.join(',');
 };
 
+const getAnswer = (first, diff, index) => String(first + diff * index);
+
 const getTask = () => {
   const first = getRandomNumber(0, 9);
   const diff = getRandomNumber(1, 9);
-  const hiddenIndex = getRandomNumber(0, 9);
+  const hiddenItemIndex = getRandomNumber(0, 9);
 
-  const question = getQuestion(first, diff, hiddenIndex);
-  const answer = getItem(first, diff, hiddenIndex);
+  const question = getQuestion(first, diff, hiddenItemIndex);
+  const answer = getAnswer(first, diff, hiddenItemIndex);
 
   return cons(question, answer);
 };

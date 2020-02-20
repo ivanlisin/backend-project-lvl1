@@ -4,7 +4,7 @@ import play from '..';
 
 const description = 'What is the result of the expression?';
 
-const getRandomItem = (items) => items[getRandomNumber(0, items.length - 1)];
+const operators = ['+', '-', '*'];
 
 const calculate = (num1, operator, num2) => {
   switch (operator) {
@@ -22,7 +22,7 @@ const calculate = (num1, operator, num2) => {
 const getTask = () => {
   const num1 = getRandomNumber(0, 9);
   const num2 = getRandomNumber(0, 9);
-  const operator = getRandomItem(['+', '-', '*']);
+  const operator = operators[getRandomNumber(0, operators.length - 1)];
 
   const question = `${num1} ${operator} ${num2}`;
   const answer = String(calculate(num1, operator, num2));
