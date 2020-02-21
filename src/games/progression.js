@@ -13,7 +13,7 @@ const getQuestion = (first, diff, hiddenItemIndex) => {
     if (i === hiddenItemIndex) {
       result.push('..');
     } else {
-      const item = first + diff * hiddenItemIndex;
+      const item = first + diff * i;
       result.push(String(item));
     }
   }
@@ -26,7 +26,7 @@ const getAnswer = (first, diff, index) => String(first + diff * index);
 const getTask = () => {
   const first = getRandomNumber(0, 9);
   const diff = getRandomNumber(1, 9);
-  const hiddenItemIndex = getRandomNumber(0, 9);
+  const hiddenItemIndex = getRandomNumber(0, progressionLength - 1);
 
   const question = getQuestion(first, diff, hiddenItemIndex);
   const answer = getAnswer(first, diff, hiddenItemIndex);
