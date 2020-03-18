@@ -1,7 +1,7 @@
 # backend-project-lvl1
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/65ace3dd2cca16ad9e4e/maintainability)](https://codeclimate.com/github/iFoxMan/backend-project-lvl1/maintainability)
-[![Build Status](https://travis-ci.org/iFoxMan/backend-project-lvl1.svg?branch=master)](https://travis-ci.org/iFoxMan/backend-project-lvl1)
+![Node CI](https://github.com/iFoxMan/backend-project-lvl1/workflows/Node%20CI/badge.svg?branch=master)
 
 ## Guide
 
