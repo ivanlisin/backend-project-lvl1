@@ -1,11 +1,14 @@
-install:
-	npm install
+install-deps:
+	npm ci
 
-start:
-	npx babel-node src/bin/brain-prime.js
+install: install-deps
 
-publish:
-	npm publish --dry-run
+build:
+	rm -rf dist
+	npm run build
 
 lint:
 	npx eslint .
+
+publish:
+	npm publish
