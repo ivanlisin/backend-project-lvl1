@@ -23,7 +23,7 @@
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
   },
@@ -36,6 +36,9 @@
   "bugs": {
     "url": "https://github.com/iFoxMan/backend-project-lvl1/issues"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "homepage": "https://github.com/iFoxMan/backend-project-lvl1#readme",
   "dependencies": {
     "@hexlet/pairs": "^1.0.10",
@@ -47,9 +50,11 @@
     "@babel/node": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
     "babel-eslint": "^10.0.3",
+    "babel-jest": "^25.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-import": "^2.20.1"
+    "eslint-plugin-import": "^2.20.1",
+    "jest": "^25.1.0"
   }
 }

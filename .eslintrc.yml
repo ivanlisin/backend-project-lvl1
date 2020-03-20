@@ -1,7 +1,14 @@
+plugins:
+  - jest
+  - babel
+
 env:
   node: true
+  jest: true
 
-extends: 'airbnb-base'
+extends:
+  - 'airbnb-base'
+  - 'plugin:jest/recommended'
 
 rules:
   no-console: 0
