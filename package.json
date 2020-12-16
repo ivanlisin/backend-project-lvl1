@@ -10,22 +10,24 @@
     "javascript",
     "nodejs"
   ],
+  "engines": {
+    "node": ">=14"
+  },
   "main": "",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js",
-    "brain-calc": "dist/bin/brain-calc.js",
-    "brain-gcd": "dist/bin/brain-gcd.js",
-    "brain-progression": "dist/bin/brain-progression.js",
-    "brain-prime": "dist/bin/brain-prime.js"
+    "brain-games": "src/bin/brain-games.js",
+    "brain-even": "src/bin/brain-even.js",
+    "brain-calc": "src/bin/brain-calc.js",
+    "brain-gcd": "src/bin/brain-gcd.js",
+    "brain-progression": "src/bin/brain-progression.js",
+    "brain-prime": "src/bin/brain-prime.js"
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "test": "jest",
-    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "prepublishOnly": "npm run build"
+    "test": "npx -n --experimental-vm-modules jest"
+  },
+  "type": "module",
+  "jest": {
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
@@ -36,27 +38,17 @@
   "bugs": {
     "url": "https://github.com/iFoxMan/backend-project-lvl1/issues"
   },
-  "jest": {
-    "testEnvironment": "node"
-  },
   "homepage": "https://github.com/iFoxMan/backend-project-lvl1#readme",
   "dependencies": {
-    "@hexlet/pairs": "^1.0.10",
+    "@hexlet/pairs": "^1.1.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.4",
-    "@babel/node": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
-    "babel-eslint": "^10.0.3",
-    "babel-jest": "^25.1.0",
     "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-jest": "^23.8.2",
-    "jest": "^25.1.0",
-    "jest-watch-typeahead": "^0.6.0"
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^23.20.0",
+    "jest": "^25.5.4",
+    "jest-cli": "^26.6.3"
   }
 }

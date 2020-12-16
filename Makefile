@@ -3,15 +3,8 @@ install-deps:
 
 install: install-deps
 
-build:
-	rm -rf dist
-	npm run build
-
 lint:
 	npx eslint .
-
-publish:
-	npm publish
 
 test:
 	npm test
@@ -21,5 +14,8 @@ test-watch:
 
 test-coverage:
 	npm test -- --coverage
+
+publish:
+	npm publish
 
 .PHONY: test
